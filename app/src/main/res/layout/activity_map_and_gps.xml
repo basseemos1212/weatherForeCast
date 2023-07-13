@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+
+    android:background="@color/teal_700"
+    tools:context=".MapAndGps">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/initial_setup"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:padding="5dp"
+        android:text="@string/location"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=":"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textLoc"
+        app:layout_constraintStart_toEndOf="@id/textLoc" />
+
+    <RadioGroup
+        android:id="@+id/rgChooseLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textLoc">
+
+        <RadioButton
+            android:id="@+id/rbgps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:checked="true"
+            android:text="@string/gps"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/rbMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/map"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:padding="5dp"
+        android:text="@string/notifications"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@id/textLoc" />
+
+    <Switch
+        android:id="@+id/switchNoti"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNotification"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSetUpDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/teal_200"
+        android:padding="8dp"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNotification" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

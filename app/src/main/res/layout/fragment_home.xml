@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="185dp"
+                android:layout_height="292dp"
+                android:layout_marginTop="68dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/mon_july_6"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/alexandria_egypt"
+                android:textAlignment="center"
+
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date" />
+
+            <TextView
+                android:id="@+id/grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/_28_c"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grade"
+
+                tools:listitem="@layout/hourly_item_view" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/sunny"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/grade"
+                app:layout_constraintHorizontal_bias="0.393"
+                app:layout_constraintStart_toStartOf="@+id/grade"
+                app:layout_constraintTop_toBottomOf="@+id/grade" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dayRecycleView"
+                android:layout_width="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                app:layout_constraintVertical_bias="0.0"
+                tools:itemCount="30"
+                tools:listitem="@layout/days_weather_itemview" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="3"
+                android:columnCount="2"
+                app:layout_constraintTop_toBottomOf="@id/dayRecycleView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <!-- Item 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_compress_24" />
+
+                    <TextView
+                        android:id="@+id/pressureValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value 1"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pressure"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <!-- Item 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_water_drop_24" />
+
+                    <TextView
+                        android:id="@+id/humidityValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/humidity"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/humidity"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <!-- Item 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_tsunami_24" />
+
+                    <TextView
+                        android:id="@+id/windSpeedValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value 3"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wind_speed"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <!-- Item 4 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_cloud_24" />
+
+                    <TextView
+                        android:id="@+id/cloudValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value 4"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cloud"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <!-- Item 5 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_wb_sunny_24" />
+
+                    <TextView
+                        android:id="@+id/ultraVioletValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value 5"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ultra_violet"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <!-- Item 6 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+                    <TextView
+                        android:id="@+id/visibltyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value 6"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visibility"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

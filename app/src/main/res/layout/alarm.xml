@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/teal_700"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="1dp"
+        android:contentDescription=""
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/alertAlarmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/alarm"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="description"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertAlarmTitle"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@color/purple_500"
+
+        android:text="ok"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

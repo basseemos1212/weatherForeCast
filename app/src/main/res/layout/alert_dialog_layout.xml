@@ -1,0 +1,121 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alertDialogCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@android:color/transparent"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/alertDialogFromBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:text="@string/from"
+
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                />
+
+            <Button
+                android:id="@+id/alertDialogToBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/to"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alertDialogFromDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/start_date"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/alertDialogFromTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/start_time"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/alertDialogToDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_date"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/alertDialogToTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_time"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/alertDialogRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/alertDialogAlarmRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:text="@string/alarm"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/alertDialogNotificationRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:buttonTint="@android:color/holo_blue_dark"
+                android:text="@string/notifications"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alertDialogSaveBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

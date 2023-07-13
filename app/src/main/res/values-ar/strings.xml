@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeatherForecCast</string>
+    <string name="initial_setup">إعداد أولي</string>
+    <string name="map">الخريطة</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="location">الموقع</string>
+    <string name="gps">نظام تحديد الموقع العالمي (GPS)</string>
+    <string name="done">تم</string>
+    <string name="from">من</string>
+    <string name="to">إلى</string>
+    <string name="start_date">تاريخ البدء</string>
+    <string name="start_time">وقت البدء</string>
+    <string name="end_date">تاريخ الانتهاء</string>
+    <string name="end_time">وقت الانتهاء</string>
+    <string name="alarm">تنبيه</string>
+    <string name="save">حفظ</string>
+    <string name="tuesday">الثلاثاء</string>
+    <string name="sunny">مشمس</string>
+    <string name="_20_38c">20/38 درجة مئوية</string>
+    <string name="country">البلد</string>
+    <string name="mon_july_6">الاثنين 6 يوليو</string>
+    <string name="alexandria_egypt">الإسكندرية، مصر</string>
+    <string name="_28_c">28 درجة مئوية</string>
+    <string name="arabic">العربية</string>
+    <string name="settings">الإعدادات</string>
+    <string name="mile_hour">ميل/ساعة</string>
+    <string name="metric_second">ة</string>
+    <string name="wind_speed">سرعة الرياح</string>
+    <string name="english">الإنجليزية</string>
+    <string name="language">اللغة</string>
+    <string name="temperature">درجه الحراره و سرعه الرياح </string>
+    <string name="celsius">درجة مئوية(متر/ثانيه)</string>
+    <string name="kelvin">كلفن(متر/ثانيه)</string>
+    <string name="fahrenheit">فهرنهايت(ميل/ساعة)</string>
+    <string name="enable">تمتر/ثانيفعيل</string>
+    <string name="disable">تعطيل</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="alerts">تنبيهات</string>
+    <string name="favorites">المفضلة</string>
+    <string name="humidity">الرطوبة</string>
+    <string name="pressure">الضغط</string>
+    <string name="cloud">الغيوم</string>
+    <string name="ultra_violet">الأشعة فوق البنفسجية</string>
+    <string name="visibility">الرويه</string>
+</resources>
